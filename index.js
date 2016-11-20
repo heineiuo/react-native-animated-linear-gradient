@@ -7,14 +7,16 @@ import rgb2hex from 'rgb2hex';
 
 class LinearGradient extends Component {
   render () {
-    const {color0, color1} = this.props;
+    const {color0, color1, children} = this.props;
     return (
       <NativeLinearGradient
         // colors={this.props.colors.map((c) => rgb2hex(c).hex)}
         colors={[color0, color1].map((c) => rgb2hex(c).hex)}
         start={[0, 0.4]}
         end={[1, 0.6]}
-        style={[styles.linearGradient]} />
+        style={[styles.linearGradient]}>
+        {children}
+      </NativeLinearGradient>
     )
   }
 }
@@ -86,7 +88,7 @@ class AnimatedGradient extends Component {
   render () {
 
     const {color0, color1} = this.state;
-    const {customColors} = this.props;
+    const {customColors, children} = this.props;
     const preferColors = [];
     // while (preferColors.length < customColors.length) {
     while (preferColors.length < 2) {
@@ -109,7 +111,9 @@ class AnimatedGradient extends Component {
         style={[styles.linearGradient]}
         // colors={interpolatedColors}
         color0={interpolatedColors[0]}
-        color1={interpolatedColors[1]} />
+        color1={interpolatedColors[1]}>
+        {children}
+      </Animated.LinearGradient>
     )
   }
 }
