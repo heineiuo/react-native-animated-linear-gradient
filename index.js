@@ -8,19 +8,20 @@ import rgb2hex from 'rgb2hex';
 class LinearGradient extends Component {
   render () {
     const {color0, color1, children} = this.props;
+    const gStart = {x: 0, y: 0.4};
+    const gEnd = {x: 1, y: 0.6};
     return (
       <NativeLinearGradient
         // colors={this.props.colors.map((c) => rgb2hex(c).hex)}
         colors={[color0, color1].map((c) => rgb2hex(c).hex)}
-        start={[0, 0.4]}
-        end={[1, 0.6]}
+        start={gStart}
+        end={gEnd}
         style={[styles.linearGradient]}>
         {children}
       </NativeLinearGradient>
     )
   }
 }
-
 Animated.LinearGradient = Animated.createAnimatedComponent(LinearGradient)
 // Animated.NativeLinearGradient = Animated.createAnimatedComponent(NativeLinearGradient)
 
