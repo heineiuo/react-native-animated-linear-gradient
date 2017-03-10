@@ -19,7 +19,7 @@ import AnimatedLinearGradient, {presetColors} from 'react-native-animated-linear
 class HelloWorldApp extends Component {
   render() {
     return (
-      <AnimatedLinearGradient />
+      <AnimatedLinearGradient customColors={presetColors.instagram} speed={4000}/>
     );
   }
 }
@@ -30,7 +30,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ## Props
 
 1. `customColors`
-A colors `array`. This package has include some preset colors, default is presetColors.instagram:
+A colors `array`. This package has include some preset colors, default is `presetColors.instagram`:
 
 ```javascript
 export presetColors = {
@@ -59,11 +59,11 @@ export presetColors = {
     'rgb(100, 173, 186)',
   ]
 };
+```
 
 2. `speed`
 The speed of the animation. default is 4000.
 
-```
 
 ## License
 
