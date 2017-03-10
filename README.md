@@ -11,7 +11,7 @@ Animated linear gradient as background animation or other.
 
 ## Use
 
-```
+```javascript
 import React, { Component } from 'react';
 import { AppRegistry, Text } from 'react-native';
 import AnimatedLinearGradient, {presetColors} from 'react-native-animated-linear-gradient'
@@ -32,7 +32,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 1. `customColors`
 A colors `array`. This package has include some preset colors, default is presetColors.instagram:
 
-```
+```javascript
 export presetColors = {
   instagram: [
     'rgb(106, 57, 171)',
