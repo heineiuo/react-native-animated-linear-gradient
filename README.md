@@ -14,7 +14,7 @@ Animated linear gradient as background animation or other.
 ```
 import React, { Component } from 'react';
 import { AppRegistry, Text } from 'react-native';
-import AnimatedLinearGradient from 'react-native-animated-linear-gradient'
+import AnimatedLinearGradient, {presetColors} from 'react-native-animated-linear-gradient'
 
 class HelloWorldApp extends Component {
   render() {
@@ -29,9 +29,8 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 
 ## Props
 
-1. colors
-
-This module incluse some preset colors:
+1. `customColors`
+A colors `array`. This package has include some preset colors, default is presetColors.instagram:
 
 ```
 export presetColors = {
@@ -60,6 +59,9 @@ export presetColors = {
     'rgb(100, 173, 186)',
   ]
 };
+
+2. `speed`
+The speed of the animation. default is 4000.
 
 ```
 
