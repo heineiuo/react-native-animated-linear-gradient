@@ -2,6 +2,12 @@
 Animated linear gradient as background animation or other.
 
 
+## Example
+
+<p align="center">
+  <img src="https://github.com/heineiuo/emoji-parse/raw/master/.github/capture.gif" width=750 height=1376>
+<br>
+
 ## Install
 
 1. install [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient),  run `npm install react-native-linear-gradient --save` 

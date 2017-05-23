@@ -18,7 +18,7 @@ import AnimatedLinearGradient, {presetColors} from 'react-native-animated-linear
 export default class simple extends Component {
   render() {
     return (
-      <AnimatedLinearGradient customColors={presetColors.firefox} speed={4000}/>
+      <AnimatedLinearGradient customColors={presetColors.firefox} speed={1000}/>
   );
   }
 }
