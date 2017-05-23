@@ -5,7 +5,7 @@ Animated linear gradient as background animation or other.
 ## Example
 
 <p align="center">
-  <img src="https://github.com/heineiuo/emoji-parse/raw/master/.github/capture.gif" width=750 height=1376>
+  <img src="https://github.com/heineiuo/react-native-animated-linear-gradient/raw/master/.github/capture.gif" width=750 height=1376>
 <br>
 
 ## Install
