@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {StyleSheet, StatusBar, Dimensions, View, Animated, Easing} from 'react-native';
 import NativeLinearGradient from 'react-native-linear-gradient';
 import rgb2hex from 'rgb2hex';

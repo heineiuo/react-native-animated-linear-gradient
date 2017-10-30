@@ -25,9 +25,10 @@
   },
   "homepage": "https://github.com/heineiuo/react-native-animated-linear-gradient#readme",
   "dependencies": {
-    "react": "^15.4.2",
-    "react-native": "^0.42.0",
-    "react-native-linear-gradient": "^2.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-native": "^0.49.5",
+    "react-native-linear-gradient": "^2.3.0",
     "rgb2hex": "^0.1.0"
   }
 }
