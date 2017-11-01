@@ -8,9 +8,9 @@ import rgb2hex from 'rgb2hex';
 
 class LinearGradient extends Component {
   render () {
-    const {color0, color1, children} = this.props;
-    const gStart = {x: 0, y: 0.4};
-    const gEnd = {x: 1, y: 0.6};
+    const {color0, color1, children, points} = this.props;
+    const gStart = points.start;
+    const gEnd = points.end;
     return (
       <NativeLinearGradient
         // colors={this.props.colors.map((c) => rgb2hex(c).hex)}
@@ -57,7 +57,11 @@ class AnimatedGradient extends Component {
 
   static defaultProps = {
     customColors: presetColors.instagram,
-    speed: 4000
+    speed: 4000,
+    points: {
+      start: {x: 0, y: 0.4}, 
+      end: {x: 1, y: 0.6}
+    }
   }
 
   state = {

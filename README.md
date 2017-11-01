@@ -70,6 +70,26 @@ export presetColors = {
 2. `speed`
 The speed of the animation. default is 4000.
 
+3. `points` (experimental)
+Describe the direction of linear gradient with start point and end point [see more](https://github.com/react-native-community/react-native-linear-gradient#start)
+
+Default: 
+```js
+const DEFAULT_POINTS = {
+  start: {x: 0, y: 0.4}, 
+  end: {x: 1, y: 0.6}
+}
+```
+
+Example:
+
+vertical: 
+```jsx
+<AnimatedLinearGradient points={{start: {x: 0.5, y: 0}, end: {x: 0.5, y: 1}}}/>
+```
+
+You can find out it is static values, no animate here :( . This points is going to be animateable soon :) .
+
 
 ## License
 
