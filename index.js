@@ -94,7 +94,7 @@ class AnimatedGradient extends Component {
   render () {
 
     const {color0, color1} = this.state;
-    const {customColors, children} = this.props;
+    const {customColors, children, points} = this.props;
     const preferColors = [];
     // while (preferColors.length < customColors.length) {
     while (preferColors.length < 2) {
@@ -115,7 +115,7 @@ class AnimatedGradient extends Component {
     return (
       <Animated.LinearGradient
         style={[styles.linearGradient]}
-        // colors={interpolatedColors}
+        points={points}
         color0={interpolatedColors[0]}
         color1={interpolatedColors[1]}>
         {children}
