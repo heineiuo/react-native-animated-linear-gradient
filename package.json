@@ -28,7 +28,7 @@
   "devDependencies": {
     "react": "^16.0.0",
     "react-native": "^0.49.5",
-    "react-native-linear-gradient": "^2.3.0",
+    "react-native-linear-gradient": "^2.3.0"
   },
   "dependencies": {
     "prop-types": "^15.6.0",
