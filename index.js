@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
-import {StyleSheet, StatusBar, Dimensions, View, Animated, Easing} from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, StatusBar, Dimensions, View, Animated, Easing } from 'react-native';
 import NativeLinearGradient from 'react-native-linear-gradient';
 import rgb2hex from 'rgb2hex';
 
 // const {height, width} = Dimensions.get('window');
 
 class LinearGradient extends Component {
-  render () {
-    const {color0, color1, children, points} = this.props;
+  render() {
+    const { color0, color1, children, points } = this.props;
     const gStart = points.start;
     const gEnd = points.end;
     return (
@@ -24,6 +24,7 @@ class LinearGradient extends Component {
   }
 }
 Animated.LinearGradient = Animated.createAnimatedComponent(LinearGradient)
+Animated.useNativeDriver = true
 // Animated.NativeLinearGradient = Animated.createAnimatedComponent(NativeLinearGradient)
 
 export const presetColors = {
@@ -59,8 +60,8 @@ class AnimatedGradient extends Component {
     customColors: presetColors.instagram,
     speed: 4000,
     points: {
-      start: {x: 0, y: 0.4}, 
-      end: {x: 1, y: 0.6}
+      start: { x: 0, y: 0.4 },
+      end: { x: 1, y: 0.6 }
     }
   }
 
@@ -74,8 +75,8 @@ class AnimatedGradient extends Component {
   }
 
   startAnimation = () => {
-    const {color0, color1} = this.state;
-    const {customColors, speed} = this.props;
+    const { color0, color1 } = this.state;
+    const { customColors, speed } = this.props;
     [color0, color1].forEach(color => color.setValue(0));
 
     Animated.parallel(
@@ -91,22 +92,22 @@ class AnimatedGradient extends Component {
 
   };
 
-  render () {
+  render() {
 
-    const {color0, color1} = this.state;
-    const {customColors, children, points, style} = this.props;
+    const { color0, color1 } = this.state;
+    const { customColors, children, points, style } = this.props;
     const preferColors = [];
     // while (preferColors.length < customColors.length) {
     while (preferColors.length < 2) {
       preferColors.push(
         customColors
           .slice(preferColors.length)
-          .concat(customColors.slice(0, preferColors.length+1))
+          .concat(customColors.slice(0, preferColors.length + 1))
       )
     }
     const interpolatedColors = [color0, color1].map((animatedColor, index) => {
       return animatedColor.interpolate({
-        inputRange: Array.from({length: customColors.length+1}, (v, k) => k),
+        inputRange: Array.from({ length: customColors.length + 1 }, (v, k) => k),
         outputRange: preferColors[index]
       })
     });
