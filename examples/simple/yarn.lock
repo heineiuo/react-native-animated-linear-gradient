@@ -3208,9 +3208,9 @@ restore-cursor@^1.0.1:
     exit-hook "^1.0.0"
     onetime "^1.0.0"
 
-rgb2hex@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/rgb2hex/-/rgb2hex-0.1.0.tgz#ccd55f860ae0c5c4ea37504b958e442d8d12325b"
+rgb2hex@^0.1.0, rgb2hex@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/rgb2hex/-/rgb2hex-0.1.6.tgz#3a9e0abf0545e6e27ad8664162559f475ecffc19"
 
 right-align@^0.1.1:
   version "0.1.3"

@@ -11,7 +11,7 @@
 		"react-native": "0.42.0",
 		"react-native-animated-linear-gradient": "^1.0.2",
 		"react-native-linear-gradient": "^2.0.0",
-		"rgb2hex": "^0.1.0"
+		"rgb2hex": "^0.1.6"
 	},
 	"devDependencies": {
 		"babel-jest": "19.0.0",
