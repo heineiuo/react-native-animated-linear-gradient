@@ -84,7 +84,8 @@ class AnimatedGradient extends Component {
         return Animated.timing(animatedColor, {
           toValue: customColors.length,
           duration: customColors.length * speed,
-          easing: Easing.linear
+          easing: Easing.linear,
+          useNativeDriver: this.props.useNativeDriver || true,
         })
       })
     )
